@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Password Generator By AMT</title>
+  </head>
+  <body class="bg-[#121027]">
+    <div class="flex flex-col items-center justify-center h-screen">
+      <p
+        class="text-center mb-32 text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-pink-500"
+      >
+        AMT Will Give a Random Password
+      </p>
+      <div class="relative w-full max-w-2xl mb-10">
+        <div
+          class="absolute inset-0.5 w-full max-w-2xl bg-gradient-to-r from-cyan-300 to-pink-500 blur-md rounded-lg mb-5"
+        ></div>
+        <div class="flex p-5 bg-[#121027] relative rounded-lg mb-5">
+          <input
+            class="text-center w-full bg-transparent outline-none text-white"
+            type="password"
+            id="password"
+          />
+          <label for="view-check" id="view-icon"
+            ><i class="fa-solid fa-eye-slash text-white"></i
+          ></label>
+          <input
+            class="hidden"
+            type="checkbox"
+            name="view"
+            id="view-check"
+            onchange="handleViewPassword()"
+          />
+        </div>
+      </div>
+
+      <div class="w-full max-w-2xl bg-white/10 text-white p-5 rounded-lg">
+        <!-- Control Section  -->
+        <div class="mb-5">
+          <div>
+            <input
+              type="checkbox"
+              name="number"
+              id="number"
+              onchange="handleCheckbox()"
+            />
+            <label for="number">Include Numbers</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="number"
+              id="special"
+              onchange="handleCheckbox()"
+            />
+            <label for="special">Include Special Characters</label>
+          </div>
+          <div class="flex gap-2">
+            <label for="length">Length </label>
+            <input
+              type="range"
+              name="length"
+              id="length"
+              min="8"
+              max="64"
+              value="8"
+              oninput="handleSlider(event.target.value)"
+            />
+            <h1><span id="char-count">8</span> Characters</h1>
+          </div>
+        </div>
+
+        <!-- Button Section -->
+
+        <div class="flex gap-5">
+          <button
+            class="bg-cyan-300 text-black w-1/2 py-2 rounded-md"
+            onclick="handleCopy()"
+          >
+            Copy to clipboard
+          </button>
+          <button
+            class="bg-pink-500 text-black w-1/2 py-2 rounded-md"
+            onclick="generatePassword()"
+          >
+            Re-Generate
+          </button>
+        </div>
+      </div>
+    </div>
+
+      <!-- Footer Stert -->
+    <footer>
+      <h1 class="footer-header text-2xl">This WebApp is Created By Abdullah Al Mubin</h1>
+      <hr class="hr">
+      <div class="footer-details">
+          <p>Contact Us</p>
+          <p>Terms of Service </p>
+          <p>Privacy Policy</p>
+          <p>Privacy Settings</p>
+          <p>Goal App</p>
+          <p>Goal Live</p>
+      </div>
+      <!-- Social Media -->
+      <div class="social-media">
+          <a class="s-icon" href="https://www.facebook.com/amttawsik/" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
+          <a class="s-icon" href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter fa-2x"></i></a>
+          <a class="s-icon" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
+      </div>
+  </footer>
+  <!-- Footer End -->
+  </body>
+</html>

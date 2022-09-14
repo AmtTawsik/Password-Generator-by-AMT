@@ -1,0 +1,29 @@
+footer{
+    background-color: #365f5a;
+    color: white;
+}
+.footer-header{
+    text-align: center;
+    padding-top: 10px;
+}
+.hr{
+    height: 0px;
+    border: 1px solid rgba(198, 65, 65, 0.1);
+}
+.footer-details{
+    display: flex;
+    justify-content: center;
+}
+.footer-details p{
+    margin-left: 20px;
+}
+.social-media{
+    display: flex;
+    justify-content: center;
+}
+.s-icon{
+    color: rgb(5, 197, 251);
+    margin-right: 20px;
+    margin-top: 10px;
+}
+/* Footer Style End */
